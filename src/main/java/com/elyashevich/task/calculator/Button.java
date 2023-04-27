@@ -27,8 +27,8 @@ public abstract class Button {
     protected JButton btnDivide;
 
     private char selectedOperator = ' ';
-    private String firstNumber = "";
-    private String secondNumber = "";
+    private String firstNumber = "0";
+    private String secondNumber = "0";
     private int position = 0;
     private static final int BUTTON_WIDTH = 80;
     private static final int BUTTON_HEIGHT = 70;
@@ -163,7 +163,6 @@ public abstract class Button {
         this.btnEqual.setSize(2 * BUTTON_WIDTH + 10, BUTTON_HEIGHT);
         this.btnEqual.addActionListener(event -> {
             if (this.checkTextFieldLength(textField)) {
-                //System.out.println(this.value);
                 String str = textField.getText();
                 for (int i = 0; i < str.length(); i++) {
                     String string = String.valueOf(str.charAt(i));
@@ -184,10 +183,10 @@ public abstract class Button {
                         Double.parseDouble(this.secondNumber), this.selectedOperator);
                 System.out.println(this.firstNumber + " " + this.selectedOperator + " " + this.secondNumber + " = " + answer);
                 textField.setText(String.valueOf(answer));
-                this.secondNumber = "";
-                this.firstNumber = "";
-                this.selectedOperator = ' ';
             }
+            this.secondNumber = "";
+            this.firstNumber = "";
+            this.selectedOperator = ' ';
         });
         return this.btnEqual;
     }
