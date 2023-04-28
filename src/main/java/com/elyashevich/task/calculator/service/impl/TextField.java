@@ -1,9 +1,13 @@
-package com.elyashevich.task.calculator;
+package com.elyashevich.task.calculator.service.impl;
 
-import javax.swing.*;
-import java.awt.*;
+import com.elyashevich.task.calculator.service.TextFieldInterface;
 
-public class TextField {
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.Insets;
+
+public class TextField implements TextFieldInterface {
     protected JTextField textField;
     private static final String FONT_NAME = "Sans Serif";
 

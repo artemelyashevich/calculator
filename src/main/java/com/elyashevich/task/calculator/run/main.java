@@ -1,6 +1,6 @@
-package com.elyashevich.task.calculator.demo;
+package com.elyashevich.task.calculator.run;
 
-import com.elyashevich.task.calculator.CalculatorUI;
+import com.elyashevich.task.calculator.init.CalculatorUI;
 
 public class main {
 
