@@ -216,7 +216,7 @@ public abstract class Button {
 
     protected JButton createClearBtn(int[] columns, int[] rows, JTextField textField) {
         this.btnClear = createButton("C", columns[0], rows[1]);
-        this.btnClear.addActionListener(event -> textField.setText(" "));
+        this.btnClear.addActionListener(event -> textField.setText(""));
         return this.btnClear;
     }
 
